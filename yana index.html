@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isi Hati Bayu</title>
+
+  <!-- Font & AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    section {
+      position: relative;
+      min-height: 100vh;
+      padding: 100px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(to bottom right, #0b0b0b, #1a1a1a);
+    }
+    h1, h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #ff9ec4;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      line-height: 1.8;
+      color: #f4d7e2;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    nav a {
+      margin: 0 6px;
+      text-decoration: none;
+      color: #ff9ec4;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff6ba3;
+    }
+
+    .glitter {
+      pointer-events: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif') repeat;
+      background-size: cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .foto-ku {
+      width: 150px;
+      height: auto;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(255, 158, 196, 0.2);
+    }
+
+    .music-control, .voice-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1a1a1a;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+      font-size: 14px;
+      color: #ff9ec4;
+      cursor: pointer;
+      z-index: 999;
+      margin-top: 10px;
+    }
+    .voice-control {
+      right: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Musik Latar -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_d3e0e3dbaa.mp3?filename=romantic-piano-110054.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Pesan Suara Cinta -->
+  <audio id="voice-message">
+    <source src="https://cdn.pixabay.com/download/audio/2023/02/01/audio_f92a4a99f2.mp3?filename=i-love-you-134084.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-control" onclick="toggleMusic()">Pause Music</button>
+  <button class="voice-control" onclick="playVoice()">Putar Pesan Cinta</button>
+
+  <!-- Efek Glitter -->
+  <div class="glitter"></div>
+
+  <!-- Navigasi -->
+  <nav>
+    <a href="#page1">1</a>
+    <a href="#page2">2</a>
+    <a href="#page3">3</a>
+    <a href="#page4">4</a>
+    <a href="#page5">5</a>
+    <a href="#page6">6</a>
+  </nav>
+
+  <!-- Halaman 1 -->
+  <section id="page1" data-aos="fade-up">
+    <img src="https://i.postimg.cc/1RkrGpgH/IMG-20250401-163659-245.jpg" alt="Foto kami" class="foto-ku"/>
+    <h1>Selamat datang di isi hati Bayu</h1>
+    <p>Tempat di mana kata menjadi pelukan, dan rindu menjadi cerita yang abadi...</p>
+  </section>
+
+  <!-- Halaman 2 -->
+  <section id="page2" data-aos="fade-up">
+    <h2> Tatap Pertama</h2>
+    <p>
+      Sore itu langit tak hanya jingga,<br>
+      Tapi menyimpan cahaya matamu.<br>
+      Tak banyak kata, tak banyak tanya,<br>
+      Tapi dunia terasa lebih indah ada kamu.
+    </p>
+  </section>
+
+  <!-- Halaman 3 -->
+  <section id="page3" data-aos="fade-up">
+    <h2> Bersama Waktu</h2>
+    <p>
+      Kita tumbuh tak hanya dalam cinta, tapi dalam pengertian. Dalam setiap pelukan dan canda, kita menjadi tempat pulang yang saling melengkapi.
+    </p>
+  </section>
+
+  <!-- Halaman 4 -->
+  <section id="page4" data-aos="fade-up">
+    <h2> Menjadi Kita</h2>
+    <p>
+      Aku tak ingin menjadi alasanmu tersenyum,<br>
+      Tapi aku ingin menjadi alasanmu bertahan.<br>
+      Karena saat kita jadi kita,<br>
+      Dunia jadi lebih bisa dimengerti.
+    </p>
+  </section>
+
+  <!-- Halaman 5 -->
+  <section id="page5" data-aos="fade-up">
+    <h2> Janji Dalam Hati</h2>
+    <p>
+      Kita tak butuh saksi, karena hati tahu janji. Kita tak butuh kata-kata mewah, cukup mata yang saling percaya bahwa ini akan lama.
+    </p>
+  </section>
+
+  <!-- Halaman 6 -->
+  <section id="page6" data-aos="fade-up">
+    <h2> Selamanya Itu Kamu</h2>
+    <p>
+      Tak ada yang lebih indah dari mencintaimu dalam diam,<br>
+      Merindukanmu tanpa alasan,<br>
+      Menemanimu tanpa batas waktu,<br>
+      Dan memilihmu... selalu.
+    </p>
+  </section>
+
+  <!-- Script AOS & Musik -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1500, once: true });
+
+    function toggleMusic() {
+      const music = document.getElementById("bg-music");
+      const button = document.querySelector(".music-control");
+      if (music.paused) {
+        music.play();
+        button.textContent = "Pause Music";
+      } else {
+        music.pause();
+        button.textContent = "Play Music";
+      }
+    }
+
+    function playVoice() {
+      const voice = document.getElementById("voice-message");
+      voice.play();
+    }
+  </script>
+</body>
+</html>
